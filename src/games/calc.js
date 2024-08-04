@@ -5,7 +5,7 @@ const operators = ['+', '-', '*', '/'];
 const getOperator = () => operators[getRandomNumber(operators.length - 1)];
 
 const showTask = () => console.log('What is the result of the expression?');
-const calc = (num1, num2, sign) => {
+const calc = (num1, sign, num2) => {
   switch (sign) {
     case '+':
       return num1 + num2;
@@ -26,7 +26,7 @@ const playCalc = () => {
   const num2 = getRandomNumber();
   console.log(`Question: ${num1} ${sign} ${num2}`);
 
-  const correctAnswer = calc(num1, num2, sign);
+  const correctAnswer = calc(num1, sign, num2);
   return correctAnswer;
 };
 
