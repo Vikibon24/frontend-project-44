@@ -14,7 +14,7 @@ const calc = (num1, sign, num2) => {
     case '*':
       return num1 * num2;
     default:
-      console.error(`Wrong sign ${sign}`);
+      throw Error(`Wrong sign ${sign}`);
   }
 };
 
