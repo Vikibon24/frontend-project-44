@@ -9,7 +9,7 @@ export default (playGame, showTask) => {
     const answer = readLineSync.question('Your answer: ');
     const isAnswerCorrect = answer === correctAnswer.toString();
     if (!isAnswerCorrect) {
-      console.log(`'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again!`);
+      console.log(`'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
     }
     console.log('Correct!');
