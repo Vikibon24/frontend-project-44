@@ -2,7 +2,7 @@ import getRandomNumber from '../randomNumber.js';
 import playGame from '../index.js';
 
 const operators = ['+', '-', '*'];
-const getOperator = () => operators[Math.floor((Math.random() * 10) / 4)];
+const getOperator = () => operators[getRandomNumber(operators.length)];
 
 const showTask = () => console.log('What is the result of the expression?');
 const calc = (num1, num2, sign) => {
