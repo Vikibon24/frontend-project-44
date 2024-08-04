@@ -10,7 +10,8 @@ const getProgression = () => {
   const result = [num];
   for (let i = num + step; result.length < progressionLength; i += step) {
     result.push(i);
-  } return result;
+  }
+  return result;
 };
 
 const playProgression = () => {
@@ -19,7 +20,7 @@ const playProgression = () => {
   const skippedNumber = progression[skippedIndexNumber];
   progression[skippedIndexNumber] = '..';
 
-  console.log(`Question: ${progression}`);
+  console.log(`Question: ${progression.join(' ')}`);
   const correctAnswer = skippedNumber;
   return correctAnswer;
 };
