@@ -2,8 +2,8 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/Vikibon24/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Vikibon24/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "Brain-games is a game of 5 games, in each of which you have to give 3 correct answes",
+  "main": "src/index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
@@ -16,7 +16,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Viktoriia",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"

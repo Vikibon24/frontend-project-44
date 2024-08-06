@@ -9,3 +9,6 @@ publish:
 
 lint:
 	npx eslint .
+
+setup:
+	npm link	
