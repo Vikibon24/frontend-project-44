@@ -4,7 +4,7 @@ import playGame from '../index.js';
 const operators = ['+', '-', '*'];
 const getOperator = () => operators[getRandomNumber(0, operators.length)];
 
-const showTask = () => console.log('What is the result of the expression?');
+const task = 'What is the result of the expression?';
 const calc = (num1, sign, num2) => {
   switch (sign) {
     case '+':
@@ -22,10 +22,9 @@ const playCalc = () => {
   const sign = getOperator();
   const num1 = getRandomNumber();
   const num2 = getRandomNumber();
-  console.log(`Question: ${num1} ${sign} ${num2}`);
-
+  const question = `${num1} ${sign} ${num2}`;
   const correctAnswer = calc(num1, sign, num2);
-  return correctAnswer;
+  return [question, correctAnswer.toString()];
 };
 
-export default () => playGame(playCalc, showTask);
+export default () => playGame(playCalc, task);

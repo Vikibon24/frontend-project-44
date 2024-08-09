@@ -3,10 +3,8 @@ import playGame from '../index.js';
 
 const progressionLength = 8;
 
-const showTask = () => console.log('What number is missing in the progression?');
-const getProgression = () => {
-  const num = getRandomNumber();
-  const step = getRandomNumber();
+const task = 'What number is missing in the progression?';
+const getProgression = (num = getRandomNumber(), step = getRandomNumber()) => {
   const result = [num];
   for (let i = num + step; result.length < progressionLength; i += step) {
     result.push(i);
@@ -20,9 +18,9 @@ const playProgression = () => {
   const skippedNumber = progression[skippedIndexNumber];
   progression[skippedIndexNumber] = '..';
 
-  console.log(`Question: ${progression.join(' ')}`);
+  const question = `${progression.join(' ')}`;
   const correctAnswer = skippedNumber;
-  return correctAnswer;
+  return [question, correctAnswer.toString()];
 };
 
-export default () => playGame(playProgression, showTask);
+export default () => playGame(playProgression, task);

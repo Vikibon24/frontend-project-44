@@ -12,14 +12,14 @@ const getGreatestCommonDiv = (num1, num2) => {
   } return result;
 };
 
-const showTask = () => console.log('Find the greatest common divisor of given numbers.');
+const task = 'Find the greatest common divisor of given numbers.';
 
 const playGcd = () => {
   const num1 = getRandomNumber();
   const num2 = getRandomNumber();
-  console.log(`Question: ${num1} ${num2}`);
+  const question = `${num1} ${num2}`;
   const correctAnswer = getGreatestCommonDiv(num1, num2);
-  return correctAnswer;
+  return [question, correctAnswer.toString()];
 };
 
-export default () => playGame(playGcd, showTask);
+export default () => playGame(playGcd, task);

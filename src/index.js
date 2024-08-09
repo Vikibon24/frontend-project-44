@@ -7,13 +7,15 @@ const welcomeUser = () => {
   return name;
 };
 
-export default (playGame, showTask) => {
+export default (playGame, task) => {
   const name = welcomeUser();
-  showTask();
-  for (let i = 1; i <= 3; i += 1) {
-    const correctAnswer = playGame();
+  console.log(task);
+  const roundsCount = 3;
+  for (let i = 1; i <= roundsCount; i += 1) {
+    const [question, correctAnswer] = playGame();
+    console.log(`Question: ${question}`);
     const answer = readLineSync.question('Your answer: ');
-    const isAnswerCorrect = answer === correctAnswer.toString();
+    const isAnswerCorrect = answer === correctAnswer;
     if (!isAnswerCorrect) {
       console.log(`'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return;
