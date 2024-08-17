@@ -2,7 +2,7 @@ import getRandomNumber from '../randomNumber.js';
 import playGame from '../index.js';
 
 const operators = ['+', '-', '*'];
-const getOperator = () => operators[getRandomNumber(0, operators.length)];
+const getOperator = () => operators[getRandomNumber(0, operators.length - 1)];
 
 const task = 'What is the result of the expression?';
 const calc = (num1, sign, num2) => {
