@@ -16,7 +16,7 @@ const getProgression = (num, step) => {
 };
 
 const playProgression = () => {
-  const skippedIndexNumber = getRandomNumber(0, progressionLength);
+  const skippedIndexNumber = getRandomNumber(0, progressionLength - 1);
   const num = getRandomNumber(minNumber, maxNumber);
   const step = getRandomNumber(minNumber, maxNumber);
   const progression = getProgression(num, step);
